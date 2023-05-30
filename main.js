@@ -279,7 +279,8 @@ NextStepBtn.addEventListener('click', (e) => {
     console.log(selectedPlan, selectedAddons)
 })
 
-GoBackBtn.addEventListener('click', () => {
+GoBackBtn.addEventListener('click', (e) => {
+    e.preventDefault()
     if(currentStep == 1) return 
     const previousNumber = StepNumbers[currentStep - 1]
     const number = StepNumbers[currentStep - 2]
