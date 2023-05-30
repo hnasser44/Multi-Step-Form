@@ -50,7 +50,8 @@ AllPlans.forEach(plan => {
 })
 
 
-ChangePlanBtn.addEventListener('click', () => {
+ChangePlanBtn.addEventListener('click', (e) => {
+    e.preventDefault()
     currentStep = 2
     selectedAddons = []
     selectedPlan = null
@@ -68,7 +69,8 @@ ChangePlanBtn.addEventListener('click', () => {
 })
 
 
-ConfirmBtn.addEventListener('click', () => {
+ConfirmBtn.addEventListener('click', (e) => {
+    e.preventDefault()
     SummaryContent.style.display = 'flex'
     const step4Elements = document.querySelectorAll('form .step4 h1, form .step4 > p, form .step4 .finishing-up');
     step4Elements.forEach(element => {
@@ -122,8 +124,6 @@ function UpdateStep3Prices()
 }
 
 NameInput.addEventListener('input', () => {
-    //check the name length
-    console.log(NameInput.value.length)
     if(NameInput.value.length < 3)
     {
         NameError.innerHTML = 'Name must be at least 3 characters'
