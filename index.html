@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+  <title>Frontend Mentor | Multi-step form</title>
+</head>
+<body>
+
+  <main>
+    <article>
+      <div class="sidebar-img">
+        <div class="step-numbers">
+          <div class="step" data-selected="true">1</div>
+          <div class="step" data-selected="false">2</div>
+          <div class="step" data-selected="false">3</div>
+          <div class="step" data-selected="false">4</div>
+        </div>
+        <picture>
+          <source srcset="/assets/images/bg-sidebar-desktop.svg"" media="(min-width:800px)">
+          <img src="/assets/images/bg-sidebar-mobile.svg" alt="">
+        </picture>
+      </div>
+
+      <form>
+        <div class="step step1">
+          <h1>Personal info</h1>
+          <p>Please provide your name, email address, and phone number.</p>
+          <div class="input-container">
+            <div>
+              <label>Name</label>
+              <span class="name-error"></span>
+            </div>
+            <input class="name-input" type="text" placeholder="e.g. Stephen King">
+          </div>
+          <div class="input-container">
+            <div>
+              <label>Email Address</label>
+              <span class="email-error">This field is required</span>
+            </div>
+            <input class="email-input" type="text" placeholder="e.g. stephenking@lorem.com">
+          </div>
+          <div class="input-container">
+            <div>
+              <label>Phone Number</label>
+              <span class="phone-error">This field is required</span>
+            </div>
+            <input class="phone-input" type="text" placeholder="e.g. +1 234 567 890">
+          </div>
+        </div>
+
+
+        <div class="step step2">
+          <h1>Select your plan</h1>
+          <p>You have the option of monthly or yearly billing.</p>
+          <div class="plans">
+            <div class="plan">
+              <img src="/assets/images/icon-arcade.svg" alt="">
+              <div class="plan-details">
+                <span>Arcade</span>
+                <span class="arcade-price">$90/yr</span>
+                <span>2 months free</span>
+              </div>
+            </div>
+            <div class="plan">
+              <img src="/assets/images/icon-advanced.svg" alt="">
+              <div class="plan-details">
+                <span>Advacned</span>
+                <span class="advanced-price">$120/yr</span>
+                <span>2 months free</span>
+              </div>
+            </div>
+            <div class="plan">
+              <img src="/assets/images/icon-pro.svg" alt="">
+              <div class="plan-details">
+                <span>Pro</span>
+                <span class="pro-price">$150/yr</span>
+                <span>2 months free</span>
+              </div>
+            </div>
+          </div>
+          <div class="slider">
+            <span class="monthly-label">Monthly</span>
+            <div class="slide monthly"></div>
+            <span class="yearly-label selected-payment-option">Yearly</span>
+          </div>
+        </div>
+
+
+
+        <div class="step step3">
+          <h1>Pick add-ons</h1>
+          <p>Add-ons help enchance your gaming experience</p>
+          <div class="add-ons">
+            <div class="add-on">
+              <div class="add-on-icon">
+                <img src="/assets/images/icon-checkmark.svg" alt="test">
+              </div>
+              <div class="add-on-details">
+                <span>Online service</span>
+                <span>Access to multiplayer games</span>
+              </div>
+              <div class="add-on-price">
+                <span class="online-service-price">+$10/yr</span>
+              </div>
+            </div>
+            <div class="add-on">
+              <div class="add-on-icon">
+                <img src="/assets/images/icon-checkmark.svg" alt="test">
+              </div>
+              <div class="add-on-details">
+                <span>Large Storage</span>
+                <span>Extra 1TB of cloud save</span>
+              </div>
+              <div class="add-on-price">
+                <span class="storage-price">+$20/yr</span>
+              </div>
+            </div>
+            <div class="add-on">
+              <div class="add-on-icon">
+                <img src="/assets/images/icon-checkmark.svg" alt="test">
+              </div>
+              <div class="add-on-details">
+                <span>Customizable profile</span>
+                <span>Custom theme on your profile</span>
+              </div>
+              <div class="add-on-price">
+                <span class="customize-profile-price">+$20/yr</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="step step4">
+          <h1>Finishing up</h1>
+          <p>Double-check everything looks OK before confirming</p>
+          <div class="finishing-up">
+
+            <div class="choosen-plan">
+
+              <div class="plan-details">
+                <span></span>
+                <a href="#" class="change-plan-btn">Change</a>
+              </div>
+              <div class="plan-price">
+                <span></span>
+              </div>
+            </div>
+
+            <div class="choosen-ad-ons">
+              
+            </div>
+
+          </div>
+          <div class="summary">
+            <img src="/assets/images/icon-thank-you.svg" alt="">
+            <h2>Thank you!</h2>
+            <p>Thanks form confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support@loremgaming.com</p>
+          </div>
+        </div>
+
+        <footer>
+          <button class="go-back-btn">Go Back</button>
+          <button class="next-step-btn">Next Step</button>
+          <button class="confirm-btn">Confirm</button>
+        </footer>
+      </form>
+
+
+      
+    </article>
+  </main>
+
+
+</body>
+</html>
